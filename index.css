@@ -1,0 +1,24 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.star {
+    width: 6em;
+    height: 6em;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50px , -50px);
+    transition: .1s;
+    filter: drop-shadow(0 0 8px rgb(124, 255, 9)); /* Ajoute une ombre à l'étoile */
+
+}
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Star moves!</title>
+  </head>
+  <body>
+    <img src="https://i.gifer.com/Zj1W.gif" alt="star" class="star" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const star = document.querySelector(".star");
+        const starShadow = document.createElement("div");
+        starShadow.classList.add("star-shadow");
+        document.body.appendChild(starShadow);
+
+        document.addEventListener("mousemove", (e) => {
+          star.style.left = e.clientX + "px";
+          star.style.top = e.clientY + "px";
+
+          const starClone = star.cloneNode(true);
+          starShadow.appendChild(starClone);
+          setTimeout(() => {
+            starShadow.removeChild(starClone);
+          }, 150);
+        });
+      });
+    </script>
+  </body>
+</html>
